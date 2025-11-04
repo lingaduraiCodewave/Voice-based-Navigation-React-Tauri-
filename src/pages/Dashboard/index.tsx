@@ -1,13 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import VoiceButton from "../../component/VoiceButton";
-import { useVoiceNavigation } from "../../hooks/useVoiceNavigation";
 
 const Dashboard = () => {
   // const { isListening, transcript, error, toggleListening } =
   //   useVoiceNavigation();
   const navigate = useNavigate();
 
-  const handleCommand = (text) => {
+  const handleCommand = (text: string) => {
     const lower = text.toLowerCase();
     if (lower.includes("dashboard")) navigate("/dashboard");
     else if (lower.includes("desktop")) navigate("/desktop");

@@ -43,7 +43,7 @@ fn recognize_audio(path: String) -> String {
 }
 
 fn main() {
-     println!("Got audio path: ");
+    println!("Got audio path: ");
     tauri::Builder::default()
     .plugin(tauri_plugin_fs::init())
     .invoke_handler(tauri::generate_handler![recognize_audio])

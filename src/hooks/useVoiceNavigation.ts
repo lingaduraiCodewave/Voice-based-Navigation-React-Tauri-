@@ -5,7 +5,7 @@ import { listen } from "@tauri-apps/api/event";
 export const useVoiceNavigation = () => {
   const navigate = useNavigate();
   const [transcript, setTranscript] = useState("");
-  const [isListening, setIsListening] = useState(true); // Vosk runs continuously
+  const [isListening, _setIsListening] = useState(true); // Vosk runs continuously
 
   useEffect(() => {
     let unlisten: any;
